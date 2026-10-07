@@ -139,7 +139,8 @@ resource "aws_ecs_service" "ruoyi" {
 
   lifecycle {
     ignore_changes = [
-      task_definition
+      task_definition,
+      desired_count
     ]
   }
 
